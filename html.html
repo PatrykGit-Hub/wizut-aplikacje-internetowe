@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        #taskForm {
+            display: flex;
+        }
+
+        #taskForm label,
+        #taskForm input,
+        #taskForm button {
+            margin-right: 10px;
+        }
+
+        #taskList li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+strong {
+    margin-right: 10px;
+}
+
+button {
+    margin-left: auto;
+}
+
+#taskList li:hover {
+    cursor: pointer;
+    background-color: rgba(16, 173, 29, 0.534);
+}
+
+#taskList li input[type="date"] {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+.editing {
+    background-color: #e6e6e6;
+}
+
+#taskList li .editButton {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.897);
+  color : white;
+}
+        
+       
+    </style>
+</head>
+<body>
+
+    <input type="text" id="searchInput" placeholder="Search tasks">
+
+    <ul id="taskList">
+    </ul>
+
+    <div id="taskForm">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" placeholder="Enter task name">
+        
+        <label for="taskDate">Task Date:</label>
+        <input type="date" id="taskDate">
+
+        <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
